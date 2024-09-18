@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>{{ pokemon['name']|capitalize }}</h2>
+    <p><strong>ID:</strong> {{ pokemon['id'] }}</p>
+    <p><strong>Types:</strong> {{ pokemon['types']|join(', ') }}</p>
+    <p><strong>Abilities:</strong> {{ pokemon['abilities']|join(', ') }}</p>
+    <p><strong>Height:</strong> {{ pokemon['height'] }} decimetres</p>
+    <p><strong>Weight:</strong> {{ pokemon['weight'] }} hectograms</p>
+{% endblock %}
