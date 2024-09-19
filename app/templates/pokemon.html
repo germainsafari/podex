@@ -1,9 +1,19 @@
 {% extends 'base.html' %}
+
 {% block content %}
-    <h2>{{ pokemon['name']|capitalize }}</h2>
-    <p><strong>ID:</strong> {{ pokemon['id'] }}</p>
-    <p><strong>Types:</strong> {{ pokemon['types']|join(', ') }}</p>
-    <p><strong>Abilities:</strong> {{ pokemon['abilities']|join(', ') }}</p>
-    <p><strong>Height:</strong> {{ pokemon['height'] }} decimetres</p>
-    <p><strong>Weight:</strong> {{ pokemon['weight'] }} hectograms</p>
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-body">
+            <h2 class="card-title">{{ pokemon.name.capitalize() }}</h2>
+            <img src="{{ pokemon.image }}" alt="{{ pokemon.name }}" class="img-fluid">
+            <ul class="list-group list-group-flush mt-4">
+                <li class="list-group-item"><strong>ID:</strong> {{ pokemon.id }}</li>
+                <li class="list-group-item"><strong>Types:</strong> {{ ', '.join(pokemon.types) }}</li>
+                <li class="list-group-item"><strong>Abilities:</strong> {{ ', '.join(pokemon.abilities) }}</li>
+                <li class="list-group-item"><strong>Height:</strong> {{ pokemon.height }} decimetres</li>
+                <li class="list-group-item"><strong>Weight:</strong> {{ pokemon.weight }} hectograms</li>
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}
