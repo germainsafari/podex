@@ -14,6 +14,7 @@ def get_pokemon(name):
             "types": [t["type"]["name"] for t in data["types"]],
             "abilities": [a["ability"]["name"] for a in data["abilities"]],
             "height": data["height"],
-            "weight": data["weight"]
+            "weight": data["weight"],
+            "sprite": data["sprites"]["front_default"]  # Fetching the Pokemon image
         }
     return None
