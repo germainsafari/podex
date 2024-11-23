@@ -15,6 +15,6 @@ def get_pokemon(name):
             "abilities": [a["ability"]["name"] for a in data["abilities"]],
             "height": data["height"],
             "weight": data["weight"],
-            "sprite": data["sprites"]["front_default"]  # Fetching the Pokemon image
+            "image": data["sprites"]["front_default"]  # Changed from 'sprite' to 'image'
         }
     return None
